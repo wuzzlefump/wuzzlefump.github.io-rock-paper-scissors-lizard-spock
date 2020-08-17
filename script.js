@@ -22,6 +22,30 @@
       
         });
 
+        $(".navbar-item").click(function(){
+            var item = $(this).attr("data-hand")
+            $(".is-active").attr("class","modal");
+            if(item == "rock"){
+                $(".is-active").attr("class","modal");
+                $("#rock-modal").attr("class","is-active");
+            }else if(item == "paper"){
+                $(".is-active").attr("class","modal");
+                $("#paper-modal").attr("class","is-active");
+            }else if(item == "scissors"){
+                $(".is-active").attr("class","modal");
+                $("#scissors-modal").attr("class","is-active");
+            }else if(item == "lizard"){
+                $(".is-active").attr("class","modal");
+                $("#lizard-modal").attr("class","is-active")
+            }else if (item == "spock"){
+                $(".is-active").attr("class","modal");
+                $("#spock-modal").attr("class","is-active")
+            }
+        })
+
+        $(".close-btn").click(function(){
+            $(".is-active").attr("class","modal");
+        })
         // game functions
 
         $(".decision").click(function(){

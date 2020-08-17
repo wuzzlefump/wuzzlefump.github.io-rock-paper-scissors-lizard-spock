@@ -32,19 +32,19 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item">
+            <a class="navbar-item" data-hand= "rock">
                 <i class="fas fa-hand-rock"></i>
             </a>
-                <a class="navbar-item">
+                <a class="navbar-item" data-hand="paper">
                     <i class="fas fa-hand-paper"></i>
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" data-hand="scissors">
                     <i class="fas fa-hand-scissors"></i>
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" data-hand="lizard">
                     <i class="fas fa-hand-lizard"></i>
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" data-hand="spock">
                     <i class="fas fa-hand-spock"></i>
                 </a>
             </div>
@@ -58,6 +58,7 @@
     <!-- rock modal -->
     <div class="modal" id="rock-modal">
         <div class="modal-background"></div>
+        <div class="card mcard">
         <div class="modal-content">
           <ul>
               <li>Rock breaks Scissors</li>
@@ -65,12 +66,15 @@
               <li>Rock kills Lizard</li>
               <li>Spock vaporizes Rock</li>
           </ul>
+          <button class="close-btn is-large" aria-label="close">Close</button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+        
       </div>
     <!-- paper modal -->
       <div class="modal" id="paper-modal">
         <div class="modal-background"></div>
+        <div class="card mcard">
         <div class="modal-content">
             <ul>
                 <li>Paper covers Rock</li>
@@ -78,12 +82,15 @@
                 <li>Paper disproves Spock</li>
                 <li>Lizard eats Paper</li>
             </ul>
+            <button class="close-btn is-large" aria-label="close">Close</button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+        
       </div>
     <!-- scissors modal -->
       <div class="modal" id="scissors-modal">
         <div class="modal-background"></div>
+        <div class="card mcard">
         <div class="modal-content">
             <ul>
                 <li>Scissors cut Paper</li>
@@ -91,12 +98,15 @@
                 <li>Scissors kill Lizard</li>
                 <li>Spock vaporizes Scissors</li>
             </ul>
+            <button class="close-btn is-large" aria-label="close">Close</button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+        
       </div>
       <!-- lizard modal -->
       <div class="modal" id="lizard-modal">
         <div class="modal-background"></div>
+        <div class="card mcard">
         <div class="modal-content">
             <ul>
                 <li>Lizard eats Paper</li>
@@ -104,12 +114,15 @@
                 <li>Lizard poisons Spock</li>
                 <li>Scissors kill Lizard</li>
             </ul>
+            <button class="close-btn is-large" aria-label="close">Close</button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+        
       </div>
       <!-- spock modal -->
       <div class="modal" id="spock-modal">
         <div class="modal-background"></div>
+        <div class="card mcard">
         <div class="modal-content">
             <ul>
                 <li>Spock vaporizes Rock</li>
@@ -117,8 +130,10 @@
                 <li>Spock vaporizes Scissors</li>
                 <li>Lizard Poisons Spock</li>
             </ul>
+            <button class="close-btn is-large" aria-label="close">Close</button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+      
+      </div>
       </div>
 
     <!-- modal section -->
