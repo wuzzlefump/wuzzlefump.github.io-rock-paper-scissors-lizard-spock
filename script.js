@@ -40,6 +40,8 @@
             }else if (item == "spock"){
                 $(".is-active").attr("class","modal");
                 $("#spock-modal").attr("class","is-active")
+            }else{
+                return;
             }
         })
 
