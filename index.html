@@ -1,172 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spock</title>
-    <!--Bootstrap Css-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <!--Mycss-->
-  <link rel="stylesheet" href="media.css">
-
+    <title>RPSLS</title>
+    <!-- bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"> 
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css
+    ">
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-<body style="background-color: black; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
-<!-- As a heading -->
-<nav class="navbar navbar-dark bg-dark">
 
-    <span class="navbar-brand mb-0 h1"> Rock-Paper-Scissors-Lizard-Spock</span>
-
-</nav>
-
-<main class="meat">
-    <div class="container">
-          <!--Top of pentagram-->
-        <div class="row" style="margin-left: 33%; margin-top: 5%;">
-
-            <div class="col-md-12">
-
-                <div class="card bg-primary text-white  " style="width: 200px; height: 250 px; display: flex; justify-content: center; text-align: center;" >
-                    <div class="card-body">
-                      <h5 class="card-header">Rock</h5>
-                      <ol>
-                        <l> Rock > Scissors </l>
-
-                        <l> Paper > Rock</l>
-
-                        <l> Rock > Lizard </l>
-
-                        <l> Spock > Rock </l>
-                      </ol>
-                    </div>
-
-                  </div>
-            </div>
+<body>
+    <!-- nav -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <h1 class="navbar-item" >
+            RPSLS
+          </h1>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-
-            <!--middle of pentagram-->
-        <div class="row middle" style="display:flex; margin-top: 5%; text-align: center; "> 
-
-            <div class="col-md-4">
-
-                <div class="card  text-white bg-info " style="width: 200px; height: 250px; ">
-                    <div class="card-body">
-
-                      <h5 class="card-header">Spock</h5>
-                     <ol>
-                        <l> Lizard > Spock </l>
-                        <l>Spock > Rock </l>
-                        <l>Paper > Spock </l>
-                        <l> Spock > Scissors</l>
-
-                     </ol>
-                    </div>
-                  </div>
-
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item">
+                <i class="fas fa-hand-rock"></i>
+            </a>
+                <a class="navbar-item">
+                    <i class="fas fa-hand-paper"></i>
+                </a>
+                <a class="navbar-item">
+                    <i class="fas fa-hand-scissors"></i>
+                </a>
+                <a class="navbar-item">
+                    <i class="fas fa-hand-lizard"></i>
+                </a>
+                <a class="navbar-item">
+                    <i class="fas fa-hand-spock"></i>
+                </a>
             </div>
-
-            <div class="col-md-4">
-
-                <div class="card  bg-dark text-white " style="width:200px; margin-top: 8%; margin-bottom: 3%;">
-                    <div class="card-body">
-                      <h5 class="card-header">Play The Game</h5>
-                      <p class="card-text">Play Rock Paper Scissors Lizard Spock </p>
-
-                      <button class="btn btn-secondary" id = "game " onclick="myFunction()"  > Click Here</button>
-                    </div>
-                  </div>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="card text-white bg-success " style="width: 200px; height: 250px;">
-                    <div class="card-body">
-                      <h5 class="card-header">Paper</h5>
-                      <ul>
-                        <l>Paper > rock</l>
-                        <l>Scissors > Paper </l>
-                        <l>Paper > Spock</l>
-                        <l>Lizard > Paper </l>
-                      </ul>
-                    </div>
-                  </div>
-
-            </div>
+          </div>
+      
         </div>
-            <!--Bottom of pentagram-->
+      </nav>
+    <!-- nav -->
 
-        <div class="row" style="margin-top: 5%; margin-bottom: 5%;">
+    <!-- modal section -->
+    <!-- rock modal -->
+    <div class="modal" id="rock-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <ul>
+              <li>Rock breaks Scissors</li>
+              <li>Paper covers Rock</li>
+              <li>Rock kills Lizard</li>
+              <li>Spock vaporizes Rock</li>
+          </ul>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+    <!-- paper modal -->
+      <div class="modal" id="paper-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <ul>
+                <li>Paper covers Rock</li>
+                <li>Scissors cut Paper</li>
+                <li>Paper disproves Spock</li>
+                <li>Lizard eats Paper</li>
+            </ul>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+    <!-- scissors modal -->
+      <div class="modal" id="scissors-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <ul>
+                <li>Scissors cut Paper</li>
+                <li>Rock breaks Scissors</li>
+                <li>Scissors kill Lizard</li>
+                <li>Spock vaporizes Scissors</li>
+            </ul>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <!-- lizard modal -->
+      <div class="modal" id="lizard-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <ul>
+                <li>Lizard eats Paper</li>
+                <li>Rock kills Lizard</li>
+                <li>Lizard poisons Spock</li>
+                <li>Scissors kill Lizard</li>
+            </ul>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <!-- spock modal -->
+      <div class="modal" id="spock-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <ul>
+                <li>Spock vaporizes Rock</li>
+                <li>Paper disproves Spock</li>
+                <li>Spock vaporizes Scissors</li>
+                <li>Lizard Poisons Spock</li>
+            </ul>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
 
-            <div class="col-md-4" style="margin-left: 18%;" >
-
-                <div class="card text-white bg-warning bottoml " style="width: 200px; height:250px; text-align: center;">
-                    <div class="card-body">
-                      <h5 class="card-header">Lizard</h5>
-                   <ol>
-                      <l>Lizard > Spock</l>
-
-                      <l> Rock > Paper</l>
-
-                      <l> Lizard > Paper</l>
-
-                      <l> Scissors > Lizard </l>
-
-                   </ol>
-                    </div>
-                  </div>
+    <!-- modal section -->
+    <!-- input and score  -->
+    <div class="card" id="mid">
+        <header class="card-header">
+            <p  class="card-footer-item">Score: <span id="playerScore" > </span></p>
+          <p class="card-footer-item">Score: <span id="computerScore"> </span></p>
+        </header>
+        <div class="card-content">
+          <div class="content" id ="submitBtn">
+              <button data-name="Rock" class ="decision">Rock</button>
+              <button data-name="Paper" class ="decision">Paper</button>
+              <button data-name="Scissors" class ="decision">Scissors</button>
+              <button data-name="Lizard" class ="decision">Lizard</button>
+              <button data-name="Spock" class ="decision">Spock</button>
+          </div>
+        </div>
+        <footer class="card-footer">
+          
+        </footer>
+      </div>
+    <!-- input and score  -->
+    <!-- Icon battle -->
+ <div class="columns">
+     <div class="column">
+        <div class="card" id ="columnLeft">
+            <div class="card-content">
+              <div id="playerContainer">
               </div>
-
-            <div class="col-md-4" >
-
-                <div class="card text-white bg-danger bottomr " style="width: 200px; height:250px ; text-align: center;">
-                    <div class="card-body">
-                      <h5 class="card-header">Scissors</h5>
-                      <ol>
-                        <l>Scissors> Paper</l>
-                        <l> Spock > Scissors </l>
-                        <l> Scissors > Lizard</l>
-                        <l> Rock > Scissors  </l>
-                      </ol>
-                    </div>
-                  </div>
+              <p class="subtitle">
+                Player
+              </p>
             </div>
-            <div class="col-md-4" >
-              </div>
+            <footer class="card-footer">
+          
+            </footer>
+          </div>
+     </div>
+     <div class="column" id="columnMid">
+        <div class="card">
+            <div class="card-content">
+              <p class="subtitle">
+                  You chose: <span id="player"></span>
+              </p>
+              <p class="subtitle">
+                Computer chose: <span id="computer"></span>
+              </p>
+              <p class = "subtitle" id="situation">
+                
+              </p>
+              <p class="subtitle" id ="verdict" > 
 
-
+              </p>
             </div>
+            <footer class="card-footer">
+              
+            </footer>
+          </div>
+     </div>
+     <div class="column">
+        <div class="card" id ="columnRight">
+            <div class="card-content">
+              <p id="computerContainer">
+              </p>
+              <p class="subtitle">
+                Computer
+              </p>
+            </div>
+            <footer class="card-footer">
+            </footer>
+          </div>
+     </div>
+ </div>
+    <!-- Icon battle -->
 
-        </div>
-
-
-
-
+    <!-- footer -->
+    <div class="footer">
+        <h6>Technologies Used:</h6>
+        <p>Bulma</p>
+        <p>Jquery</p>
+        <p>Font Awesome</p>
+        <p>Anime Js </p>
     </div>
-</main>
 
-<footer>
+    <!-- footer -->
 
+    <!-- Scripts -->
 
-</footer>
-
-
-
-
-
-
-
-
-<!--Rock paper sissors code-->
-<!-- game script -->
-
-<script src="script.js">
-
-  
-</script>
-
-<!-- Bootstrap JS-->
-
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- my js -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
