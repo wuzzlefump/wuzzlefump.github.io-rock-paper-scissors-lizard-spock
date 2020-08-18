@@ -9,6 +9,12 @@
     const Scissors ="<i class='fas fa-hand-scissors fa-7x'></i>"
     const Lizard ="<i class='fas fa-hand-lizard fa-7x'></i>"
     const Spock ="<i class='fas fa-hand-spock fa-7x'></i>"
+
+    const rock = "<i class='fas fa-hand-rock fa-4x'></i>"
+    const paper ="<i class='fas fa-hand-paper fa-4x'></i>"
+    const scissors ="<i class='fas fa-hand-scissors fa-4x'></i>"
+    const lizard ="<i class='fas fa-hand-lizard fa-4x'></i>"
+    const spock ="<i class='fas fa-hand-spock fa-4x'></i>"
     $(document).ready(function() {
 
         // doc functions
@@ -69,6 +75,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Rock);
                 $("#computerContainer").append(Rock);
+                $(".mobile-player").append(rock);
+                $(".mobile-computer").append(rock);
                 $("#situation").text("This Rocks...")
                 $("#verdict").text("TIE")
 
@@ -76,6 +84,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Rock);
                 $("#computerContainer").append(Paper);
+                $(".mobile-player").append(rock);
+                $(".mobile-computer").append(paper);
                 $("#situation").text("Paper covers Rock")
                 $("#verdict").text("You Lose")
                 lose++
@@ -84,6 +94,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Rock);
                 $("#computerContainer").append(Scissors);
+                $(".mobile-player").append(rock);
+                $(".mobile-computer").append(scissors);
                 $("#situation").text("Rock breaks Scissors")
                 $("#verdict").text("You Win")
                 win++
@@ -91,6 +103,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Rock);
                 $("#computerContainer").append(Lizard);
+                $(".mobile-player").append(rock);
+                $(".mobile-computer").append(lizard);
                 $("#situation").text("Rock kills Lizard")
                 $("#verdict").text("You Win")
                 win++
@@ -98,6 +112,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Rock);
                 $("#computerContainer").append(Spock);
+                $(".mobile-player").append(rock);
+                $(".mobile-computer").append(spock);
                 $("#situation").text("Spock vaporizes Rock")
                 $("#verdict").text("You Lose")
                 lose++
@@ -105,6 +121,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Paper);
                 $("#computerContainer").append(Rock);
+                $(".mobile-player").append(paper);
+                $(".mobile-computer").append(rock);
                 $("#situation").text("Paper covers Rock")
                 $("#verdict").text("You Win")
                 win++
@@ -113,6 +131,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Paper);
                 $("#computerContainer").append(Paper);
+                $(".mobile-player").append(paper);
+                $(".mobile-computer").append(paper);
                 $("#situation").text("Some Tree Loses")
                 $("#verdict").text("TIE")
 
@@ -120,6 +140,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Paper);
                 $("#computerContainer").append(Scissors);
+                $(".mobile-player").append(paper);
+                $(".mobile-computer").append(scissors);
                 $("#situation").text("Scissors cuts Paper")
                 $("#verdict").text("You Lose")
                 lose++
@@ -127,6 +149,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Paper);
                 $("#computerContainer").append(Lizard);
+                $(".mobile-player").append(paper);
+                $(".mobile-computer").append(lizard);
                 $("#situation").text("Lizard eats Paper")
                 $("#verdict").text("You Lose")
                 lose++
@@ -134,6 +158,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Paper);
                 $("#computerContainer").append(Spock);
+                $(".mobile-player").append(paper);
+                $(".mobile-computer").append(spock);
                 $("#situation").text("Paper disproves Spock")
                 $("#verdict").text("You Win")
                 win++
@@ -142,6 +168,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Scissors);
                 $("#computerContainer").append(Rock);
+                $(".mobile-player").append(scissors);
+                $(".mobile-computer").append(rock);
                 $("#situation").text("Rock breaks Scissors")
                 $("#verdict").text("You Lose")
                 lose++
@@ -150,6 +178,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Scissors);
                 $("#computerContainer").append(Paper);
+                $(".mobile-player").append(scissors);
+                $(".mobile-computer").append(paper);
                 $("#situation").text("Scissors cuts Paper")
                 $("#verdict").text("You Win")
                 win++
@@ -157,6 +187,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Scissors);
                 $("#computerContainer").append(Scissors);
+                $(".mobile-player").append(scissors);
+                $(".mobile-computer").append(scissors);
                 $("#situation").text("Looking Sharp")
                 $("#verdict").text("TIE")
 
@@ -164,6 +196,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Scissors);
                 $("#computerContainer").append(Lizard);
+                $(".mobile-player").append(scissors);
+                $(".mobile-computer").append(lizard);
                 $("#situation").text("Scissors kill Lizard")
                 $("#verdict").text("You Win")
                 win++
@@ -172,6 +206,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Scissors);
                 $("#computerContainer").append(Spock);
+                $(".mobile-player").append(scissors);
+                $(".mobile-computer").append(spock);
                 $("#situation").text("Spock vaporizes Scissors")
                 $("#verdict").text("You Lose")
                 lose++
@@ -180,6 +216,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Lizard);
                 $("#computerContainer").append(Rock);
+                $(".mobile-player").append(lizard);
+                $(".mobile-computer").append(rock);
                 $("#situation").text("Rock kills Lizard")
                 $("#verdict").text("You Lose")
                 lose++
@@ -188,6 +226,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Lizard);
                 $("#computerContainer").append(Paper);
+                $(".mobile-player").append(lizard);
+                $(".mobile-computer").append(paper);
                 $("#situation").text("Lizard eats Paper")
                 $("#verdict").text("You Win")
                 win++
@@ -196,6 +236,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Lizard);
                 $("#computerContainer").append(Scissors);
+                $(".mobile-player").append(lizard);
+                $(".mobile-computer").append(scissors);
                 $("#situation").text("Scissors kill Lizard")
                 $("#verdict").text("You Lose")
                 lose++
@@ -204,6 +246,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Lizard);
                 $("#computerContainer").append(Lizard);
+                $(".mobile-player").append(lizard);
+                $(".mobile-computer").append(lizard);
                 $("#situation").text("Two many Lizards")
                 $("#verdict").text("TIE")
 
@@ -211,6 +255,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Lizard);
                 $("#computerContainer").append(Spock);
+                $(".mobile-player").append(lizard);
+                $(".mobile-computer").append(spock);
                 $("#situation").text("Lizard poisons Spock")
                 $("#verdict").text("You Win")
                 win++
@@ -218,6 +264,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Spock);
                 $("#computerContainer").append(Rock);
+                $(".mobile-player").append(spock);
+                $(".mobile-computer").append(rock);
                 $("#situation").text("Spock vaporizes Rock ")
                 $("#verdict").text("You Win")
                 win++
@@ -225,6 +273,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Spock);
                 $("#computerContainer").append(Paper);
+                $(".mobile-player").append(spock);
+                $(".mobile-computer").append(paper);
                 $("#situation").text("Paper disproves Spock")
                 $("#verdict").text("You Lose")
                 lose++
@@ -232,6 +282,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Spock);
                 $("#computerContainer").append(Scissors);
+                $(".mobile-player").append(spock);
+                $(".mobile-computer").append(scissors);
                 $("#situation").text("Spock vaporizes Scissors")
                 $("#verdict").text("You Win")
                 win++
@@ -240,6 +292,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Spock);
                 $("#computerContainer").append(Lizard);
+                $(".mobile-player").append(spock);
+                $(".mobile-computer").append(lizard);
                 $("#situation").text("Lizard poisons Spock")
                 $("#verdict").text("You Lose")
                 lose++
@@ -248,6 +302,8 @@
                 emptyContainer();
                 $("#playerContainer").append(Spock);
                 $("#computerContainer").append(Spock);
+                $(".mobile-player").append(spock);
+                $(".mobile-computer").append(spock);
                 $("#situation").text("Live Long and Prosper")
                 $("#verdict").text("TIE")
             }
@@ -259,6 +315,8 @@
         function emptyContainer(){
             $("#playerContainer").empty();
             $("#computerContainer").empty();
+            $(".mobile-player").empty();
+            $(".mobile-computer").empty();
           }
         function choices(){
             $("#player").text(choice)

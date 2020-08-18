@@ -77,9 +77,14 @@ align-items: center;
     margin-left: 25%;
     margin-right: 20%;
 }
-
+.mobile{
+    display: none;
+}
+.fa-4x{
+    display: none;
+}
 /* mediaQ */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 780px){
     #submitBtn{
         flex-direction: column;
     }
@@ -89,11 +94,21 @@ align-items: center;
     }
     #columnLeft{
         margin: 4%;
+        display: none;
     }
     #columnMid{
         margin: 4%;
     }
     #columnRight{
         margin: 4%;
+        display: none;
     }
+    .mobile{
+        display: flex;
+        flex-direction: row;
+    }
+    .fa-4x{
+        display: inline;
+    }
+    
 }
