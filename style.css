@@ -83,6 +83,8 @@ align-items: center;
 .fa-4x{
     display: none;
 }
+    
+
 /* mediaQ */
 @media only screen and (max-width: 780px){
     #submitBtn{
@@ -106,9 +108,10 @@ align-items: center;
     .mobile{
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
     .fa-4x{
-        display: inline;
+        display: initial;
     }
-    
+
 }
